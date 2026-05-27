@@ -2,8 +2,6 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>UGC-NET Notes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css">
 </head>
 <body>
@@ -12,22 +10,14 @@
     window.$docsify = {
       name: 'UGC-NET Notes',
       loadSidebar: true,
-      autoHeader: true,
       subMaxLevel: 3,
-      search: 'auto',
-      // This plugin generates the sidebar automatically!
-      plugins: [
-        function(hook, vm) {
-          hook.beforeEach(function(html) {
-            return html + '\n\n----\nLast updated: {docsify-updated}';
-          });
-        }
-      ]
+      // The magic happens here:
+      autoHeader: true,
     }
   </script>
+  <!-- Docsify Library -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <!-- Auto-sidebar plugin -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- THIS PLUGIN BUILDS THE SIDEBAR AUTOMATICALLY -->
+  <script src="//unpkg.com/docsify-auto-sidebar@latest"></script>
 </body>
 </html>
