@@ -1,3 +1,2 @@
 title: UGC-NET Study Notes
-remote_theme: pmarsceill/just-the-docs
-color_scheme: dark # Optional: change to 'light' if you prefer white background
+theme: jekyll-theme-minimal
