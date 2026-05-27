@@ -10,14 +10,19 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'UGC-NET Study',
-      repo: 'Ghemanth9876/UGC-NET-',
+      name: 'UGC-NET Notes',
       loadSidebar: true,
+      autoHeader: true,
       subMaxLevel: 3,
-      search: 'auto'
+      search: 'auto',
+      // This plugin automatically builds the sidebar from your folders!
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>
