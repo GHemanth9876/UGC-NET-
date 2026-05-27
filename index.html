@@ -15,14 +15,19 @@
       autoHeader: true,
       subMaxLevel: 3,
       search: 'auto',
-      // This plugin automatically builds the sidebar from your folders!
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      }
+      // This plugin generates the sidebar automatically!
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function(html) {
+            return html + '\n\n----\nLast updated: {docsify-updated}';
+          });
+        }
+      ]
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- Auto-sidebar plugin -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>
